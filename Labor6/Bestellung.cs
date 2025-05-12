@@ -5,7 +5,7 @@ namespace Labor6;
 public class Bestellung
 {
     public List<Pizza> Pizzas { get; }
-    
+
     public Bestellung()
     {
         Pizzas = new List<Pizza>();
@@ -18,7 +18,7 @@ public class Bestellung
     public double BerechnePreis()
     {
         var preis = 0.0;
-        
+
         //Hier wurde ein Fehler gemacht
         for (var i = 1; i < Pizzas.Count; i++)
         {
@@ -28,5 +28,5 @@ public class Bestellung
         return preis;
     }
 
-    
+
 }

@@ -5,7 +5,7 @@ namespace Labor6;
 
 public class BestellungMitFactory
 {
-    
+
     public List<IPizza> Pizzas { get; }
     private readonly IPizzaFactory _factory;
 
@@ -19,11 +19,11 @@ public class BestellungMitFactory
     {
         Pizzas.Add(_factory.ErstellePizza(zutaten));
     }
-    
+
     public double BerechnePreis()
     {
         var preis = 0.0;
-        
+
         //Hier wurde ein Fehler gemacht
         for (var i = 1; i < Pizzas.Count; i++)
         {
