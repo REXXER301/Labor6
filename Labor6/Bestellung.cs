@@ -1,4 +1,3 @@
-using Labor6.Factory;
 using Labor6.Model;
 
 namespace Labor6;
@@ -7,9 +6,13 @@ public class Bestellung
 {
     public List<Pizza> Pizzas { get; }
     
-    public Bestellung(List<Pizza> pizzas)
+    public Bestellung()
     {
-        Pizzas = pizzas;
+        Pizzas = new List<Pizza>();
+    }
+    public void BestellePizza(List<double> zutaten)
+    {
+        Pizzas.Add(new Pizza(zutaten));
     }
 
     public double BerechnePreis()
